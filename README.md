@@ -1,2 +1,3 @@
-# Projeto-2-Aed-1
-Continuação do sistema de consulta do projeto 1
+# Projeto-AED1
+
+Um sistema de consultório, com o intuito de ajudar a registrar consultas, horarios, pacientes e medicos.
