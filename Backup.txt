@@ -1,0 +1,50 @@
+Paciente numero 1
+Nome do paciente: a 
+Idade do paciente: 2
+Peso do paciente: 2
+Altura do paciente: 2
+Paciente numero 1
+Nome do paciente: a 
+Idade do paciente: 2
+Peso do paciente: 2
+Altura do paciente: 2
+Paciente numero 1
+Nome do paciente: a 
+Idade do paciente: 2
+Peso do paciente: 2
+Altura do paciente: 2
+Paciente numero 2
+Nome do paciente: b 
+Idade do paciente: 2
+Peso do paciente: 2
+Altura do paciente: 2
+Paciente numero 1
+Nome do paciente: a 
+Idade do paciente: 2
+Peso do paciente: 2
+Altura do paciente: 2
+Paciente numero 2
+Nome do paciente: b 
+Idade do paciente: 2
+Peso do paciente: 2
+Altura do paciente: 2
+Paciente numero 3
+Nome do paciente: c 
+Idade do paciente: 2
+Peso do paciente: 2
+Altura do paciente: 2
+Paciente numero 1
+Nome do paciente: a 
+Idade do paciente: 2
+Peso do paciente: 4
+Altura do paciente: 2
+Paciente numero 2
+Nome do paciente: b 
+Idade do paciente: 2
+Peso do paciente: 2
+Altura do paciente: 2
+Paciente numero 3
+Nome do paciente: c 
+Idade do paciente: 2
+Peso do paciente: 2
+Altura do paciente: 2
