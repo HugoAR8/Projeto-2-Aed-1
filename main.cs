@@ -20,19 +20,20 @@ namespace Sistema {
 
    Console.Clear();
    art();
-
-   Console.WriteLine("Pacientes");
-   Console.WriteLine("Consultas");
-   Console.WriteLine("Médicos");
+   Console.WriteLine("O que deseja acessar ?");
+   Console.WriteLine("Informações dos pacientes (digite 'Pacientes')");
+   Console.WriteLine("Informações das consultas (digite 'Consultas')");
+   Console.WriteLine("Informações das consultas (digite 'Médicos')");
    aux = Console.ReadLine();
 
    if (aux == "Pacientes") {
     Console.Clear();
-    Console.WriteLine("Cadastrar");
-    Console.WriteLine("Listar");
-    Console.WriteLine("Buscar");
-    Console.WriteLine("Editar");
-    Console.WriteLine("Excluir");
+    Console.WriteLine("O que deseja fazer?");
+    Console.WriteLine("Cadastrar paciente (digite 'Cadastrar')");
+    Console.WriteLine("Listar pacientes (digite 'Listar')");
+    Console.WriteLine("Buscar paciente (digite 'Buscar')");
+    Console.WriteLine("Editar paciente (digite 'Editar')");
+    Console.WriteLine("Excluir paciente (digite 'Excluir')");
     Console.WriteLine("Menu");
 
     aux = (Console.ReadLine());
@@ -101,11 +102,12 @@ namespace Sistema {
    } else {
     if (aux == "Consultas") {
     Console.Clear();
-    Console.WriteLine("Marcar");
-    Console.WriteLine("Listar");
-    Console.WriteLine("Buscar");
-    Console.WriteLine("Editar");
-    Console.WriteLine("Excluir");
+    Console.WriteLine("O que deseja fazer ?");
+    Console.WriteLine("Marcar consulta (digite 'Marcar')");
+    Console.WriteLine("Listar consultas (digite 'Listar')");
+    Console.WriteLine("Buscar consulta (digite 'Buscar')");
+    Console.WriteLine("Editar consulta (digite 'Editar')");
+    Console.WriteLine("Excluir consulta (digite 'Excluir')");
     Console.WriteLine("Menu");
 
     aux = (Console.ReadLine());
@@ -173,11 +175,12 @@ namespace Sistema {
     } else {
      if (aux == "Médicos") {
       Console.Clear();
-      Console.WriteLine("Cadastrar");
-      Console.WriteLine("Listar");
-      Console.WriteLine("Buscar");
-      Console.WriteLine("Editar");
-      Console.WriteLine("Excluir");
+      Console.WriteLine("O que deseja fazer ?");
+      Console.WriteLine("Cadastrar médico (digite 'Cadastrar')");
+      Console.WriteLine("Listar médicos (digite 'Listar')");
+      Console.WriteLine("Buscar médico (digite 'Buscar')");
+      Console.WriteLine("Editar médico (digite 'Editar')");
+      Console.WriteLine("Excluir médico (digite 'Excluir')");
       Console.WriteLine("Menu");
       aux = (Console.ReadLine());
 
