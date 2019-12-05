@@ -24,8 +24,14 @@ namespace Sistema {
    Console.WriteLine("Informações dos pacientes (digite 'Pacientes')");
    Console.WriteLine("Informações das consultas (digite 'Consultas')");
    Console.WriteLine("Informações das consultas (digite 'Médicos')");
+   Console.WriteLine("Mostrar backup (digite 'Backup')");
    aux = Console.ReadLine();
 
+   
+  if(aux == "Backup"){
+     Console.Clear();
+     db.listarBackup();
+   }else{
    if (aux == "Pacientes") {
     Console.Clear();
     Console.WriteLine("O que deseja fazer?");
@@ -239,6 +245,7 @@ namespace Sistema {
        }
       }
      }
+    }
 
 
     }

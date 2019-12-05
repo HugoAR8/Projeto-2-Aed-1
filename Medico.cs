@@ -2,7 +2,8 @@ using System;
 namespace Sistema {
 
   class Medico{
-
+    
+    
     private string nome;
     private string especializacao;
     public string[] horarios = new string[5]; 

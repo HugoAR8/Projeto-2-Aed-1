@@ -134,6 +134,21 @@ namespace Sistema {
    saida.Close();
   }
 
+  public void listarBackup() {
+    StreamReader entrada;
+    string caminho = "Backup.txt";
+    entrada = File.OpenText(caminho);
+
+    while(entrada.EndOfStream != true){
+
+     
+      Console.WriteLine(entrada.ReadLine());
+
+    } 
+    entrada.Close();
+  }
+  
+
 
 
 
