@@ -112,10 +112,17 @@ namespace Sistema {
    }
    catch(System.FormatException e){
      Console.WriteLine("A idade tem que ser em numeros inteiros, certifique-se que foi isso que você escreveu e escreva novamente a idade do paciente!");
-     aux.setIdade(int.Parse(Console.ReadLine()));
+     arrumarIdadePaciente(aux);
    }
    Console.WriteLine("Escreva a altura do paciente: ");
-   aux.setAltura(double.Parse(Console.ReadLine()));
+   try{
+     aux.setAltura(double.Parse(Console.ReadLine()));
+   }
+   catch(System.FormatException e){
+     Console.WriteLine("A altura tem que ser em numeros quebrados, certifique-se que foi isso que você escreveu e escreva novamente a idade do paciente!");
+     arrumarAlturaPaciente(aux);
+
+   }
    Console.WriteLine("Escreva o peso do paciente: ");
    aux.setPeso(double.Parse(Console.ReadLine()));
 
@@ -128,6 +135,34 @@ namespace Sistema {
     }
    }
   }
+
+  public void arrumarAlturaPaciente(Paciente i ){
+    bool conseguiu = false;
+    while(conseguiu == false){
+      try{
+        conseguiu = true;
+        i.setAltura(double.Parse(Console.ReadLine()));
+      }
+      catch(System.FormatException e){
+        Console.WriteLine("A altura tem que ser em numeros quebrados, certifique-se que foi isso que você escreveu e escreva novamente a idade do paciente!");
+       conseguiu = false;
+      }
+    }
+  }
+  public void arrumarIdadePaciente(Paciente i){
+    bool conseguiu = false;
+    while(conseguiu == false){
+      try{
+        conseguiu = true;
+        i.setIdade(int.Parse(Console.ReadLine()));
+      }
+      catch(System.FormatException e){
+       Console.WriteLine("A idade tem que ser em numeros inteiros, certifique-se que foi isso que você escreveu e escreva novamente a idade do paciente!");
+       conseguiu = false;
+      }
+    }
+    }
+  
 
   public void salvarBackup() {
    StreamWriter saida;
