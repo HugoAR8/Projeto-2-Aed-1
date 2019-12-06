@@ -107,7 +107,13 @@ namespace Sistema {
    Console.WriteLine("Escreva o nome do paciente: ");
    aux.setNome(Console.ReadLine());
    Console.WriteLine("Escreva a idade do paciente: ");
-   aux.setIdade(int.Parse(Console.ReadLine()));
+   try{
+    aux.setIdade(int.Parse(Console.ReadLine()));
+   }
+   catch(System.FormatException e){
+     Console.WriteLine("A idade tem que ser em numeros inteiros, certifique-se que foi isso que você escreveu e escreva novamente a idade do paciente!");
+     aux.setIdade(int.Parse(Console.ReadLine()));
+   }
    Console.WriteLine("Escreva a altura do paciente: ");
    aux.setAltura(double.Parse(Console.ReadLine()));
    Console.WriteLine("Escreva o peso do paciente: ");
@@ -267,10 +273,6 @@ namespace Sistema {
      }
     }
    }
-
-  }
-
-  public void editarConsulta() {
 
   }
 

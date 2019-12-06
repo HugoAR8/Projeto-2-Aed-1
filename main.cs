@@ -31,6 +31,11 @@ namespace Sistema {
   if(aux == "Backup"){
      Console.Clear();
      db.listarBackup();
+     Console.WriteLine("Deseja voltar para o menu ?(Digite 'Menu' caso a resposta seja sim)");
+     aux = Console.ReadLine();
+     if(aux == "Menu"){
+      menu(db);
+     }
    }else{
    if (aux == "Pacientes") {
     Console.Clear();
@@ -246,7 +251,7 @@ namespace Sistema {
       }
      }
     }
-
+   
 
     }
 

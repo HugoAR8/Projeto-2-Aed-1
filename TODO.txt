@@ -1,0 +1,3 @@
+Fazer try catch nas variavéis idade, altura, peso etc
+Pensar nos metodos e atributos estáticos
+2 classes extras que serão classes pai(herança)
