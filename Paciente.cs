@@ -1,24 +1,17 @@
 using System;
 namespace Sistema {
 
- class Paciente {
+ class Paciente : Pessoas {
 
-  private string nome;
   private int idade;
   private double peso;
   private double altura;
-
+  
   public Paciente() {
   }
 
 
-  public string getNome() {
-   return nome;
-  }
-
-  public void setNome(string n){
-    nome = n;
-  }
+  
 
   public int getIdade() {
    return idade;

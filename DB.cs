@@ -2,6 +2,7 @@ using System;
 using System.IO;
 namespace Sistema {
  class DB {
+  
   private Paciente[] pacientes = new Paciente[20];
   private Consulta[] consultas = new Consulta[20];
   private Medico[] medicos = new Medico[20];
@@ -124,8 +125,14 @@ namespace Sistema {
 
    }
    Console.WriteLine("Escreva o peso do paciente: ");
-   aux.setPeso(double.Parse(Console.ReadLine()));
+   try{
+    aux.setPeso(double.Parse(Console.ReadLine()));
+   }
+   catch(System.FormatException e){
+     Console.WriteLine("A altura tem que ser em numeros quebrados, certifique-se que foi isso que você escreveu e escreva novamente a idade do paciente!");
+     arrumarPesoPaciente(aux);
 
+   }
    for (int i = 0; i < pacientes.Length; i++) {
 
     if (pacientes[i] == null) {
@@ -135,6 +142,22 @@ namespace Sistema {
     }
    }
   }
+
+  public void arrumarPesoPaciente(Paciente i ){
+    bool conseguiu = false;
+    while(conseguiu == false){
+      try{
+        conseguiu = true;
+        i.setPeso(double.Parse(Console.ReadLine()));
+      }
+      catch(System.FormatException e){
+        Console.WriteLine("O peso tem que ser em numeros quebrados, certifique-se que foi isso que você escreveu e escreva novamente a idade do paciente!");
+       conseguiu = false;
+      }
+    }
+  }
+
+  
 
   public void arrumarAlturaPaciente(Paciente i ){
     bool conseguiu = false;
