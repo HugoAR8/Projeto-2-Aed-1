@@ -7,7 +7,6 @@ namespace Sistema {
 
 
   public static void Main() {
-
    string aux;
 
    Console.Clear();
@@ -20,6 +19,15 @@ namespace Sistema {
 
    aux = Console.ReadLine();
 
+   if(aux == "Backup"){
+     Console.Clear();
+     DB.listarBackup();
+     Console.WriteLine("Deseja voltar para o menu ?(Digite 'Menu' caso a resposta seja sim)");
+     aux = Console.ReadLine();
+     if(aux == "Menu"){
+      menu();
+     }
+   }
    if (aux == "Pacientes") {
     Console.Clear();
     Console.WriteLine("O que deseja fazer?");

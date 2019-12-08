@@ -15,12 +15,30 @@ namespace Sistema {
    Console.WriteLine("Escreva o nome do paciente: ");
    aux.setNome(Console.ReadLine());
    Console.WriteLine("Escreva a idade do paciente: ");
-   aux.setIdade(int.Parse(Console.ReadLine()));
+   try{
+    aux.setIdade(int.Parse(Console.ReadLine()));
+   }
+   catch(System.FormatException e){
+     Console.WriteLine("A idade é em numeros inteiros, verifique se foi o que digitou e tente denovo.");
+     aux.arrumarIdade(aux);
+   }
    Console.WriteLine("Escreva o peso do paciente: ");
-   aux.setPeso(double.Parse(Console.ReadLine()));
-   Console.WriteLine("Escreva a altura do paciente: ");
-   aux.setAltura(double.Parse(Console.ReadLine()));
+   try{
+    aux.setPeso(double.Parse(Console.ReadLine()));
+   }
+   catch(System.FormatException ex){
+     Console.WriteLine("O peso é definido em numeros, certifique-se que foi o que digitou e tente novamente.");
+     aux.arrumarPeso(aux);
 
+   }
+   Console.WriteLine("Escreva a altura do paciente: ");
+   try{
+    aux.setAltura(double.Parse(Console.ReadLine()));
+   }
+   catch(System.FormatException exc){
+     Console.WriteLine("A altura é definida em numeros, certifique-se que foi o que digitou e tente novamente.");
+     aux.arrumarAltura(aux);
+   }
    for (int i = 0; i < pacientes.Length; i++) {
 
     if (pacientes[i] == null) {
@@ -29,6 +47,60 @@ namespace Sistema {
 
     }
    }
+   DB.salvarBackup();
+  }
+
+
+  public void arrumarAltura(Paciente p){
+    bool conseguiu = false;
+    while(conseguiu == false){
+      try{
+        conseguiu = true;
+        p.setAltura(double.Parse(Console.ReadLine()));
+      }
+      catch(System.FormatException e){
+        Console.WriteLine("A altura é definida em numeros, certifique-se que foi o que digitou e tente novamente.");
+        conseguiu = false;
+
+      }
+    }
+  }
+
+
+  public void arrumarPeso(Paciente p){
+    bool conseguiu = false;
+    while(conseguiu == false){
+      try{
+        conseguiu = true;
+        p.setPeso(double.Parse(Console.ReadLine()));
+      }
+      catch(System.FormatException e){
+        Console.WriteLine("O peso é definido em numero, certifique-se que foi o que digitou e tente novamente.");
+        conseguiu = false;
+
+      }
+    }
+
+    
+  }
+
+
+
+  public void arrumarIdade(Paciente p){
+    bool conseguiu = false;
+    while(conseguiu == false){
+      try{
+        conseguiu = true;
+        p.setIdade(int.Parse(Console.ReadLine()));
+      }
+      catch(System.FormatException e){
+        Console.WriteLine("A idade é em numeros inteiros, verifique se foi o que digitou e tente denovo.");
+        conseguiu = false;
+
+      }
+    }
+
+    
   }
 
 
